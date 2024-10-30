@@ -33,6 +33,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblname = new System.Windows.Forms.Label();
             this.lblnumber = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnlogin
@@ -78,11 +80,20 @@
             this.lblnumber.TabIndex = 4;
             this.lblnumber.Text = "Student Number:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(548, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblnumber);
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.textBox2);
@@ -90,6 +101,7 @@
             this.Controls.Add(this.btnlogin);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +114,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label lblnumber;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
