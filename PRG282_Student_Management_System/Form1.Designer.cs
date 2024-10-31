@@ -29,22 +29,17 @@
         private void InitializeComponent()
         {
             this.btnlogin = new System.Windows.Forms.Button();
-            this.txtfullname = new System.Windows.Forms.TextBox();
-            this.txtstudentno = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblname = new System.Windows.Forms.Label();
             this.lblnumber = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblpass = new System.Windows.Forms.Label();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
-            this.folderBrowserDialog3 = new System.Windows.Forms.FolderBrowserDialog();
-            this.cbxPassShow = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(209, 222);
+            this.btnlogin.Location = new System.Drawing.Point(204, 219);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(75, 23);
             this.btnlogin.TabIndex = 0;
@@ -52,19 +47,19 @@
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtfullname
+            // textBox1
             // 
-            this.txtfullname.Location = new System.Drawing.Point(247, 114);
-            this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(100, 20);
-            this.txtfullname.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(247, 114);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // txtstudentno
+            // textBox2
             // 
-            this.txtstudentno.Location = new System.Drawing.Point(247, 145);
-            this.txtstudentno.Name = "txtstudentno";
-            this.txtstudentno.Size = new System.Drawing.Size(100, 20);
-            this.txtstudentno.TabIndex = 2;
+            this.textBox2.Location = new System.Drawing.Point(247, 159);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 2;
             // 
             // lblname
             // 
@@ -79,67 +74,34 @@
             // lblnumber
             // 
             this.lblnumber.AutoSize = true;
-            this.lblnumber.Location = new System.Drawing.Point(148, 148);
+            this.lblnumber.Location = new System.Drawing.Point(148, 162);
             this.lblnumber.Name = "lblnumber";
             this.lblnumber.Size = new System.Drawing.Size(87, 13);
             this.lblnumber.TabIndex = 4;
             this.lblnumber.Text = "Student Number:";
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.Location = new System.Drawing.Point(209, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Register!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // lblpass
-            // 
-            this.lblpass.AutoSize = true;
-            this.lblpass.Location = new System.Drawing.Point(148, 173);
-            this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(56, 13);
-            this.lblpass.TabIndex = 7;
-            this.lblpass.Text = "Password:";
-            // 
-            // txtpass
-            // 
-            this.txtpass.Location = new System.Drawing.Point(247, 173);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(100, 20);
-            this.txtpass.TabIndex = 8;
-            this.txtpass.UseSystemPasswordChar = true;
-            // 
-            // cbxPassShow
-            // 
-            this.cbxPassShow.AutoSize = true;
-            this.cbxPassShow.Location = new System.Drawing.Point(249, 199);
-            this.cbxPassShow.Name = "cbxPassShow";
-            this.cbxPassShow.Size = new System.Drawing.Size(102, 17);
-            this.cbxPassShow.TabIndex = 9;
-            this.cbxPassShow.Text = "Show Password";
-            this.cbxPassShow.UseVisualStyleBackColor = true;
-            this.cbxPassShow.CheckedChanged += new System.EventHandler(this.cbxPassShow_CheckedChanged);
+            this.pictureBox1.Location = new System.Drawing.Point(548, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbxPassShow);
-            this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.lblpass);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblnumber);
             this.Controls.Add(this.lblname);
-            this.Controls.Add(this.txtstudentno);
-            this.Controls.Add(this.txtfullname);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnlogin);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,17 +110,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.TextBox txtfullname;
-        private System.Windows.Forms.TextBox txtstudentno;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label lblnumber;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblpass;
-        private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog3;
-        private System.Windows.Forms.CheckBox cbxPassShow;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
