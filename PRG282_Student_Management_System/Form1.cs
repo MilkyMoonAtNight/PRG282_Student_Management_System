@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRG282_Project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,10 +23,13 @@ namespace PRG282_Student_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var sr = new StreamReader(path))
-            {
+            frmMain MainForm= new frmMain();
+            MainForm.Show();
+            
+            //using (var sr = new StreamReader(path))
+            //{
                 
-            }
+            //}
         }
 
         private void label1_Click(object sender, EventArgs e)
