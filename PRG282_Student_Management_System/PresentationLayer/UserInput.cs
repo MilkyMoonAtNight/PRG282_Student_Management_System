@@ -12,10 +12,10 @@ namespace PRG282_Project.PresentationLayer
     internal class UserInput
     {
 
-
+        //method that gets all te user inputs from the textboxes in the main form
         public StudentInfo GetInput(frmMain form)
         {
-            return new StudentInfo
+            return new StudentInfo //returns a new studentinfo object containing the inputs
             {
                 StudentID = form.txtStudentID.Text,
                 Name = form.txtName.Text,

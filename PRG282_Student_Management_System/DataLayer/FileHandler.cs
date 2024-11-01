@@ -15,17 +15,16 @@ namespace PRG282_Project.DataLayer
     //this class handles reading and writing to the textfile
     internal class FileHandler
     {
-
+        //method that adds a new student to the text file
         public void AddStudent(string id,string name, string age, string course, frmMain form )
         { 
-
-
-            InputValidation validation = new InputValidation();
+            InputValidation validation = new InputValidation();//create a new InputValidation object
+            //validate the inputs using the validation methods in the InputValidation class
             bool noEmpty= validation.noEmptyFields(id,name,age,course);
             bool validStudentID = validation.isStudentIDValid(id, form.txtStudentID);
             bool validAge = validation.isAgeValid(age, form.txtAge);
 
-            if (noEmpty == true && validStudentID == true && validAge == true)
+            if (noEmpty == true && validStudentID == true && validAge == true) // if the inputs pass validation
             {
                 if (File.Exists("students.txt"))//test if the textfile exists
                 {
@@ -45,8 +44,6 @@ namespace PRG282_Project.DataLayer
                     MessageBox.Show("Error!The text file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            
         }
 
         //reads all the lines of the textfile into an array
@@ -55,7 +52,7 @@ namespace PRG282_Project.DataLayer
             string fileName = "students.txt";
             if (File.Exists(fileName))
             {
-                string[] lines = File.ReadAllLines(fileName);
+                string[] lines = File.ReadAllLines(fileName);//reads the text file and stores each line in an array
                 return lines;
             }
             else

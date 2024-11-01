@@ -20,8 +20,8 @@ namespace PRG282_Project
         {
             InitializeComponent();
         }
-        BindingSource bs = new BindingSource();
-        DataTable table = new DataTable();
+        BindingSource bs = new BindingSource();//initiate a new binding source
+        DataTable table = new DataTable(); //initiate a new table
         int IndexValue = 0;
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -83,14 +83,13 @@ namespace PRG282_Project
         {
 
         }
-       
-        
+
+        //method moves to the previous entry in the data grid view table
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            
             bs.MovePrevious();
         }
-
+        //method moves to the next entry in the data grid view table
         private void btnNext_Click(object sender, EventArgs e)
         {
             bs.MoveNext();
