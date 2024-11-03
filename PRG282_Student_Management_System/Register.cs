@@ -52,7 +52,7 @@ namespace PRG282_Student_Management_System
                     using (var sw = new StreamWriter(path, true))
                     {
                         MessageBox.Show($"Fullname: {txtfullname.Text}, Student Number: {lblnewnum.Text}","Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        sw.WriteLine($"{txtfullname.Text},{lblnewnum.Text},{txtpass.Text},{cbxcourses.Text},{destinationPath}");
+                        sw.WriteLine($"{txtfullname.Text.ToLower()},{lblnewnum.Text},{txtpass.Text},{cbxcourses.Text},{destinationPath}");
                     }
                     this.Close();
                 }

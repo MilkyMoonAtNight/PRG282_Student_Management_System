@@ -15,7 +15,7 @@ namespace PRG282_Student_Management_System
 {
     public partial class Form1 : Form
     {
-        string path = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\PRG282_Project\PRG282_Student_Management_System\Login\studentlogin.txt";
+        string path = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Users.txt";
         public Form1()
         {
             InitializeComponent();
@@ -23,14 +23,81 @@ namespace PRG282_Student_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMain MainForm= new frmMain();
-            MainForm.Show();
-            
-            //using (var sr = new StreamReader(path))
-            //{
-                
-            //}
+            try
+            {
+                // Use a flag to check if the user is found
+                bool userFound = false;
+
+                // Read the file line by line
+                using (var sr = new StreamReader(path))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(',');
+
+                        // Ensure there are enough parts before accessing them
+                        if (parts.Length >= 5)
+                        {
+                            //fullname matches
+                            if (parts[0].ToLower() == txtfullname.Text.ToLower())
+                            {
+                                userFound = true;
+
+                                //student number matches
+                                if (parts[1] == txtstudentno.Text)
+                                {
+                                    try
+                                    {
+                                        // Load the image file path and display it
+                                        pbxlogin.Image = Image.FromFile(parts[4]);
+                                        pbxlogin.SizeMode = PictureBoxSizeMode.StretchImage;
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("Error loading image: " + ex.Message, "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+
+                                    //password matches
+                                    if (parts[2] == txtpass.Text)
+                                    {
+                                        MessageBox.Show($"Welcome {txtfullname.Text}!", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        frmMain frmMain = new frmMain();
+                                        frmMain.ShowDialog();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Sorry, your password is incorrect.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Sorry, your student number is incorrect.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                                break; //user was found
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("The data format in the file is incorrect.", "Data Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    //user wasn't found
+                    if (!userFound)
+                    {
+                        MessageBox.Show("Sorry, your fullname is incorrect.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {

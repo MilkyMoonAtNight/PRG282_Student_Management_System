@@ -1,2 +1,2 @@
-﻿Iwan,670144,Groen,BCOM: Batchelors of Computing.,E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Pictures\Iwan_20241103_174847.png
-Jean Paul Seaman,225848,pass,BIT: Batchelors of Information Tech,E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Pictures\JP_20241103_175307.png
+﻿iwan,670144,Groen,BCOM: Batchelors of Computing.,E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Pictures\Iwan_20241103_174847.png
+jean paul seaman,225848,pass,BIT: Batchelors of Information Tech,E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Pictures\JP_20241103_175307.png
