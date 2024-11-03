@@ -13,11 +13,19 @@ namespace PRG282_Student_Management_System
 {
     public partial class Register : Form
     {
+        string destinationPath;
         string fileName;
-        string path = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\PRG282_Project\PRG282_Student_Management_System\Login\studentlogin.txt";
+        string path = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Users.txt";
         public Register()
         {
             InitializeComponent();
+        }
+        public string GenerateRandomNumber()
+        {
+            var rand = new Random();
+            int number = rand.Next(100000, 1000000);
+            lblnewnum.Text = number.ToString(); 
+            return lblnewnum.Text;
         }
 
         private void btnconfirm_Click(object sender, EventArgs e)
@@ -25,36 +33,40 @@ namespace PRG282_Student_Management_System
             try
             {
                 string[] numcheck = File.ReadAllLines(path);
-                string fullname = txtfullname.Text;
-                var rand = new Random();
-                string studentno = Convert.ToString(rand.Next(999999, 100000));
-                string pass = txtpass.Text;
-                using (var sw = new StreamWriter(path, true))
-                {
-                    foreach (string s in numcheck)
-                    {
-                        if (s == studentno)
-                        {
-                            MessageBox.Show("Student number in use.", "This student number is already used, try logging in.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Conformation.", $"Fullname: {txtfullname.Text}, Student Numer: {txtstudentno.Text}", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            sw.WriteLine($"{txtfullname},{txtstudentno},{txtpass}");
-                            sw.Close();
-                        }
-                    }
+                bool isDuplicate = false;
 
+                foreach (string s in numcheck)
+                {
+                    if (s.Contains(lblnewnum.Text))
+                    {
+                        MessageBox.Show("Warning", "Sorry, this number is already in use. Click OK to create a new one.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        GenerateRandomNumber();  // Generate a new number if a duplicate is found
+                        isDuplicate = true;
+                        break;  // Exit the loop since we found a duplicate
+                    }
                 }
-                Register register = new Register();
-                register.Close();
+
+                // If no duplicates
+                if (!isDuplicate)
+                {
+                    using (var sw = new StreamWriter(path, true))
+                    {
+                        MessageBox.Show($"Fullname: {txtfullname.Text}, Student Number: {lblnewnum.Text}","Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        sw.WriteLine($"{txtfullname.Text},{lblnewnum.Text},{txtpass.Text},{cbxcourses.Text},{destinationPath}");
+                    }
+                    this.Close();
+                }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
 
         private void btnPict_Click(object sender, EventArgs e)
         {
-            Files.Filter = "PDF Files|*.pdf|JPEG Files|*.jpeg|PNG Files|*.png";
+            Files.Filter = "JPEG Files|*.jpeg|PNG Files|*.png";
 
             if (Files.ShowDialog() == DialogResult.OK)
             {
@@ -62,10 +74,10 @@ namespace PRG282_Student_Management_System
                 string extension = Path.GetExtension(Files.FileName);
                 lblfile.Text = Files.FileName;
                 fileName = Path.GetFileName(Files.FileName);
-                string destinationFolder = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\PRG282_Project\PRG282_Student_Management_System\Login\Pictures";
+                string destinationFolder = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Pictures\";
                 string uniqueFileName = $"{originalFileName}_{DateTime.Now:yyyyMMdd_HHmmss}{extension}";
 
-                string destinationPath = Path.Combine(destinationFolder, uniqueFileName);
+                destinationPath = Path.Combine(destinationFolder, uniqueFileName);
 
                 try
                 {
@@ -95,6 +107,26 @@ namespace PRG282_Student_Management_System
 
         private void lblfile_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            GenerateRandomNumber();
+            cbxcourses.Items.Add("BIT: Batchelors of Information Tech");
+            cbxcourses.Items.Add("BCOM: Batchelors of Computing"); 
+        }
+
+        private void cbxPassShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxPassShow.Checked)
+            {
+                txtpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtpass.UseSystemPasswordChar = true;
+            }
 
         }
     }
