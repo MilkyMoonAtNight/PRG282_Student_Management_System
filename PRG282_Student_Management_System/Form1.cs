@@ -15,7 +15,7 @@ namespace PRG282_Student_Management_System
 {
     public partial class Form1 : Form
     {
-        string path = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Users.txt";
+        string path = @"Users\Users.txt";
         public Form1()
         {
             InitializeComponent();

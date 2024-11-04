@@ -74,7 +74,7 @@ namespace PRG282_Student_Management_System
                 string extension = Path.GetExtension(Files.FileName);
                 lblfile.Text = Files.FileName;
                 fileName = Path.GetFileName(Files.FileName);
-                string destinationFolder = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Pictures\";
+                string destinationFolder = @"Users\Pictures\";
                 string uniqueFileName = $"{originalFileName}_{DateTime.Now:yyyyMMdd_HHmmss}{extension}";
 
                 destinationPath = Path.Combine(destinationFolder, uniqueFileName);
