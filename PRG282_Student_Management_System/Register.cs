@@ -24,6 +24,7 @@ namespace PRG282_Student_Management_System
         {
             var rand = new Random();
             int number = rand.Next(100000, 1000000);
+
             lblnewnum.Text = number.ToString(); 
             return lblnewnum.Text;
         }
