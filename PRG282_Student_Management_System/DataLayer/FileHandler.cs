@@ -9,6 +9,8 @@ using System.IO;
 using PRG282_Project.BusinessLogicLayer;
 using System.Windows.Forms;
 using PRG282_Project.PresentationLayer;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRG282_Project.DataLayer
 {
@@ -63,5 +65,31 @@ namespace PRG282_Project.DataLayer
             }
 
         }
+
+        
+
+        //Searching for the student then updating the information and writing the information back to the textfile
+        public void updatedInformationRetrieval(int ID, string name, int Age, string course)
+        {
+            string file = "students.txt";
+            // Read all lines from the file
+            var lines = File.ReadAllLines(file).ToList();
+
+            // Update the matching line
+            for (int i = 0; i < lines.Count; i++)
+            {
+                var parts = lines[i].Split(',');
+                if ((int.Parse(parts[0]) == ID ) || parts[1] == name || (int.Parse(parts[2]) == Age) || parts[3] == course ) 
+                {
+                    lines[i] = $"{ID},{name},{Age},{course}"; // Update line with new details
+                    break;
+                }
+            }
+
+            // Write the updated lines back to the file
+            File.WriteAllLines(file, lines);
+        }
+
+
     }
 }

@@ -94,12 +94,34 @@ namespace PRG282_Project
 
         private void dgvDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-          
+            
+            
+            //Get updated data from text boxes
+            int StudentID = int.Parse(txtStudentID.Text);
+            string Name = txtName.Text;
+            int Age = int.Parse(txtAge.Text);
+            string Course = txtCourse.Text;
+
+            //create object for Update student class to send the retrieved data
+            FileHandler updateStudents = new FileHandler();
+            updateStudents.updatedInformationRetrieval(StudentID, Name, Age, Course);
+
+
+            ViewStudents viewStudents = new ViewStudents();
+            List<string[]> studentData = viewStudents.View();
+            //Loop over each element (student) in studentData List and adds to DataTable.
+            foreach (string[] student in studentData)
+            {
+                table.Rows.Add(student);
+            }
+
+            MessageBox.Show("Student information updated successfully.");
+
         }
         
         private void btnDelete_Click(object sender, EventArgs e)
@@ -118,6 +140,22 @@ namespace PRG282_Project
             bs.MoveNext();
         }
 
-        
+        private void dgvDisplay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Display selected studentinfo in textboxes
+
+            int indexRow = e.RowIndex;//get selected row index
+
+            DataGridViewRow row = dgvDisplay.Rows[indexRow];
+
+            //pass data selected to textboxes
+            txtStudentID.Text = row.Cells[0].Value.ToString();
+            txtName.Text = row.Cells[1].Value.ToString();
+            txtAge.Text = row.Cells[2].Value.ToString();
+            txtCourse.Text = row.Cells[3].Value.ToString();
+
+
+            
+        }
     }
 }

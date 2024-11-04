@@ -44,14 +44,14 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.grpbSummary = new System.Windows.Forms.GroupBox();
+            this.txtAvgAge = new System.Windows.Forms.TextBox();
+            this.txtTotalStudents = new System.Windows.Forms.TextBox();
             this.lblAveAge = new System.Windows.Forms.Label();
             this.lblSumText2 = new System.Windows.Forms.Label();
             this.lblTotalStudents = new System.Windows.Forms.Label();
             this.lblSumText1 = new System.Windows.Forms.Label();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.txtTotalStudents = new System.Windows.Forms.TextBox();
-            this.txtAvgAge = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
             this.gpbInput.SuspendLayout();
             this.grpbSummary.SuspendLayout();
@@ -68,6 +68,7 @@
             this.dgvDisplay.RowTemplate.Height = 28;
             this.dgvDisplay.Size = new System.Drawing.Size(718, 240);
             this.dgvDisplay.TabIndex = 0;
+            this.dgvDisplay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplay_CellClick);
             this.dgvDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplay_CellContentClick);
             // 
             // btnAdd
@@ -229,6 +230,20 @@
             this.grpbSummary.Text = "Summary";
             this.grpbSummary.Visible = false;
             // 
+            // txtAvgAge
+            // 
+            this.txtAvgAge.Location = new System.Drawing.Point(381, 12);
+            this.txtAvgAge.Name = "txtAvgAge";
+            this.txtAvgAge.Size = new System.Drawing.Size(93, 22);
+            this.txtAvgAge.TabIndex = 5;
+            // 
+            // txtTotalStudents
+            // 
+            this.txtTotalStudents.Location = new System.Drawing.Point(105, 12);
+            this.txtTotalStudents.Name = "txtTotalStudents";
+            this.txtTotalStudents.Size = new System.Drawing.Size(93, 22);
+            this.txtTotalStudents.TabIndex = 4;
+            // 
             // lblAveAge
             // 
             this.lblAveAge.AutoSize = true;
@@ -284,20 +299,6 @@
             this.btnNext.Text = "Next >";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // txtTotalStudents
-            // 
-            this.txtTotalStudents.Location = new System.Drawing.Point(105, 12);
-            this.txtTotalStudents.Name = "txtTotalStudents";
-            this.txtTotalStudents.Size = new System.Drawing.Size(93, 22);
-            this.txtTotalStudents.TabIndex = 4;
-            // 
-            // txtAvgAge
-            // 
-            this.txtAvgAge.Location = new System.Drawing.Point(381, 12);
-            this.txtAvgAge.Name = "txtAvgAge";
-            this.txtAvgAge.Size = new System.Drawing.Size(93, 22);
-            this.txtAvgAge.TabIndex = 5;
             // 
             // frmMain
             // 

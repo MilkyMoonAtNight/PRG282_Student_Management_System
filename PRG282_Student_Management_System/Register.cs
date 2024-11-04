@@ -16,6 +16,7 @@ namespace PRG282_Student_Management_System
         string destinationPath;
         string fileName;
         string path = Path.GetFullPath(@"Users\Users.txt");
+        
         public Register()
         {
             InitializeComponent();
