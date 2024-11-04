@@ -15,7 +15,7 @@ namespace PRG282_Student_Management_System
     {
         string destinationPath;
         string fileName;
-        string path = @"E:\OneDrive - belgiumcampus.ac.za\2nd_Year\PRG282\prg\PRG282_Student_Management_System\Users\Users.txt";
+        string path = @"Users\Users.txt";
         public Register()
         {
             InitializeComponent();
