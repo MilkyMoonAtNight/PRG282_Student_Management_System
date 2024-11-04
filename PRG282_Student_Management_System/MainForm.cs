@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.IO;
 using PRG282_Project.DataLayer;
 using PRG282_Project.PresentationLayer;
+using PRG282_Student_Management_System.BusinessLogicLayer;
+using PRG282_Student_Management_System.PresentationLayer;
 
 namespace PRG282_Project
 {
@@ -63,9 +65,30 @@ namespace PRG282_Project
             
         }
 
+        //View students button => calls View method, from ViewStudents Class in PresentationLayer.
+
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            ViewStudents viewStudents = new ViewStudents();
+            List<string[]> studentData =viewStudents.View();
+            //Loop over each element (student) in studentData List and adds to DataTable.
+            foreach (string[] student in studentData)
+            {
+                table.Rows.Add(student);
+            }
+        }
 
+        private void btnSummary_Click(object sender, EventArgs e)
+        {
+            ViewSummary summary = new ViewSummary();
+            //Call Calculate Summary method using view summary object to return TotalStudents count and avg age calculation results
+            var(TotalStudents, AveAge) = summary.CalculateSummary();
+
+            //add results to text boxes for display
+            txtTotalStudents.Text = TotalStudents.ToString();
+            txtAge.Text = AveAge.ToString();
+            
+            
         }
 
 
@@ -94,5 +117,7 @@ namespace PRG282_Project
         {
             bs.MoveNext();
         }
+
+        
     }
 }
