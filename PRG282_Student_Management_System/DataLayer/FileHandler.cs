@@ -28,12 +28,13 @@ namespace PRG282_Project.DataLayer
             bool validStudentID = validation.isStudentIDValid(id, form.txtStudentID);
             bool validAge = validation.isAgeValid(age, form.txtAge);
 
+            string fileName = @"..\..\Students\students.txt";
             if (noEmpty == true && validStudentID == true && validAge == true) // if the inputs pass validation
             {
-                if (File.Exists("students.txt"))//test if the textfile exists
+                if (File.Exists(fileName))//test if the textfile exists
                 {
                     string data = $"{id},{name},{age},{course}";
-                    File.AppendAllText("students.txt", Environment.NewLine + data);//apppends the student data to the students textfile
+                    File.AppendAllText(fileName, Environment.NewLine + data);//apppends the student data to the students textfile
 
                     //test if student has been added
                     if (validation.DoesStudentIDExist(id) == true)
@@ -44,7 +45,7 @@ namespace PRG282_Project.DataLayer
                     
                 }
                 else
-                {
+                {//display error message
                     MessageBox.Show("Error!The text file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -53,7 +54,7 @@ namespace PRG282_Project.DataLayer
         //reads all the lines of the textfile into an array
         public string[] read()
         {
-            string fileName = "students.txt";
+            string fileName = @"..\..\Students\students.txt";
             if (File.Exists(fileName))
             {
                 string[] lines = File.ReadAllLines(fileName);//reads the text file and stores each line in an array
@@ -76,7 +77,7 @@ namespace PRG282_Project.DataLayer
         public void Search(int IDSearch) 
         {
             //put file path in a variable
-            string filepath = "students.txt";
+            string filepath = @"..\..\Students\students.txt";
 
             // Read all lines from the file and add it to a list
             var line = File.ReadAllLines(filepath).ToList();//.to list creates a list
@@ -91,9 +92,10 @@ namespace PRG282_Project.DataLayer
                 {
 
                     if (int.Parse(parts[0]) == IDSearch)
-                    { 
+                    {
                     }
                 }
+            }
 
 
 
@@ -107,7 +109,7 @@ namespace PRG282_Project.DataLayer
             public  void updatedInformationRetrieval(int ID, string name, int Age, string course)
         {
             //put file path in a variable
-            string file = "students.txt";
+            string file = @"..\..\Students\students.txt";
 
             // Read all lines from the file and add it to a list
             var lines = File.ReadAllLines(file).ToList();//.to list creates a list

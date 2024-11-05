@@ -13,11 +13,13 @@ using PRG282_Project.DataLayer;
 using PRG282_Project.PresentationLayer;
 using PRG282_Student_Management_System.BusinessLogicLayer;
 using PRG282_Student_Management_System.PresentationLayer;
+using PRG282_Student_Management_System;
 
 namespace PRG282_Project
 {
     public partial class frmMain : Form
     {
+       
         public frmMain()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace PRG282_Project
         int IndexValue = 0;
         private void frmMain_Load(object sender, EventArgs e)
         {
+          
             //Create a table when form loads
             table.Columns.Add("Student ID",typeof(string));
             table.Columns.Add("Name", typeof(string));

@@ -10,7 +10,7 @@ namespace PRG282_Student_Management_System.BusinessLogicLayer
     internal class StudentDataRepository
     {
         private List<string[]> studentList;
-        private string path = "students.txt";
+        private string path = @"..\..\Students\students.txt";
 
         //Contructor to read and process data from students.txt file once and make list available to other methods.
         public StudentDataRepository()
