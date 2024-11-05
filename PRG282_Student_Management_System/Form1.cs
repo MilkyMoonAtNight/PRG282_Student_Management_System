@@ -15,7 +15,7 @@ namespace PRG282_Student_Management_System
 {
     public partial class Form1 : Form
     {
-        string path = Path.GetFullPath(@"Users\Users.txt");
+        string path = @"..\..\Users\Users.txt";
         public Form1()
         {
             InitializeComponent();

@@ -15,7 +15,7 @@ namespace PRG282_Student_Management_System
     {
         string destinationPath;
         string fileName;
-        string path = Path.GetFullPath(@"Users\Users.txt");
+        string path = @"..\..\Users\Users.txt";
         
         public Register()
         {
@@ -76,7 +76,7 @@ namespace PRG282_Student_Management_System
                 string extension = Path.GetExtension(Files.FileName);
                 lblfile.Text = Files.FileName;
                 fileName = Path.GetFileName(Files.FileName);
-                string destinationFolder = @"Users\Pictures\";
+                string destinationFolder = @"..\..\Users\Pictures\";
                 string uniqueFileName = $"{originalFileName}_{DateTime.Now:yyyyMMdd_HHmmss}{extension}";
 
                 destinationPath = Path.Combine(destinationFolder, uniqueFileName);

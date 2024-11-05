@@ -80,6 +80,7 @@ namespace PRG282_Project
 
         private void btnSummary_Click(object sender, EventArgs e)
         {
+            grpbSummary.Visible = true;
             ViewSummary summary = new ViewSummary();
             //Call Calculate Summary method using view summary object to return TotalStudents count and avg age calculation results
             var(TotalStudents, AveAge) = summary.CalculateSummary();
