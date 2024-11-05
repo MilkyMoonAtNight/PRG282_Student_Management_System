@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using PRG282_Project.PresentationLayer;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.LinkLabel;
+using System.IO.Ports;
 
 namespace PRG282_Project.DataLayer
 {
@@ -66,23 +68,65 @@ namespace PRG282_Project.DataLayer
 
         }
 
-        
 
-        //Searching for the student then updating the information and writing the information back to the textfile
-        public void updatedInformationRetrieval(int ID, string name, int Age, string course)
+
+
+
+        //Searching for student ID to display student information in datagrid
+        public void Search(int IDSearch) 
         {
-            string file = "students.txt";
-            // Read all lines from the file
-            var lines = File.ReadAllLines(file).ToList();
+            //put file path in a variable
+            string filepath = "students.txt";
 
-            // Update the matching line
-            for (int i = 0; i < lines.Count; i++)
+            // Read all lines from the file and add it to a list
+            var line = File.ReadAllLines(filepath).ToList();//.to list creates a list
+
+            // Update the matching line,looping through all the lines
+            for (int i = 0; i < line.Count; i++)
             {
-                var parts = lines[i].Split(',');
-                if ((int.Parse(parts[0]) == ID ) || parts[1] == name || (int.Parse(parts[2]) == Age) || parts[3] == course ) 
+                var parts = line[i].Split(',');
+
+                // Ensure the line has the correct number of parts 
+                if (parts.Length == 4)
                 {
-                    lines[i] = $"{ID},{name},{Age},{course}"; // Update line with new details
-                    break;
+
+                    if (int.Parse(parts[0]) == IDSearch)
+                    { 
+                    }
+                }
+
+
+
+        }
+
+
+
+
+
+            //Searching for the student then updating the information and writing the information back to the textfile
+            public  void updatedInformationRetrieval(int ID, string name, int Age, string course)
+        {
+            //put file path in a variable
+            string file = "students.txt";
+
+            // Read all lines from the file and add it to a list
+            var lines = File.ReadAllLines(file).ToList();//.to list creates a list
+
+
+                // Update the matching line,looping through all the lines
+                for (int i = 0; i < lines.Count; i++)
+                {
+                var parts = lines[i].Split(',');
+
+                // Ensure the line has the correct number of parts 
+                if (parts.Length == 4)
+                {
+                   
+                    if (int.Parse(parts[0]) == ID)
+                    {
+                        lines[i] = $"{ID},{name},{Age},{course}"; // Update line with new details
+                        break;
+                    }
                 }
             }
 
@@ -90,6 +134,12 @@ namespace PRG282_Project.DataLayer
             File.WriteAllLines(file, lines);
         }
 
+
+
+
+       
+
+            
 
     }
 }

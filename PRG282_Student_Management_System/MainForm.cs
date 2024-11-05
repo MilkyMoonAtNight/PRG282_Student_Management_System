@@ -165,5 +165,14 @@ namespace PRG282_Project
 
             
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int StudentID = int.Parse(txtSearch.Text);
+
+            //Creating object and sending input to search method
+            FileHandler fileHandler = new FileHandler();
+            fileHandler.Search(StudentID);
+        }
     }
 }

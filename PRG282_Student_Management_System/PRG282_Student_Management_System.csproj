@@ -107,6 +107,7 @@
     <Folder Include="Users\pictures\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Students\students.txt" />
     <Content Include="Users\Users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
