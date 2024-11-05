@@ -26,18 +26,29 @@ namespace PRG282_Student_Management_System.PresentationLayer
 
             foreach (string[] student in studentList)
             {
+                //use TryParse to convert student age (found at index 2) to an integer and add age to totalAge variable.
                 if(int.TryParse(student[2], out int age))
                 {
                     totalAge += age;
                 }
 
             }
-            //use ternary operator to check if total students is greater than 0
+            //use ternary operator to check if total students is greater than 0 (because division by 0 will cause an error.
             //If true - will return total age divided by total number of students to get avg age
-
-            double AverageAge = totalStudents >0? totalAge / totalStudents :0;
+            //If false will return '0'.
             
+            //Cast totalAge to double to ensure answer can be calculated with decimal precision (else dividing two integers will result in an integer answer and the average
+            //might not be an integer).
+            //Math.Round method used to round the AverageAge value to three decimal places.
+            double AverageAge = totalStudents >0? Math.Round((double)totalAge/totalStudents,3) :0;
+
+           
+
+
+
             return (totalStudents, AverageAge);
+
+
 
         }
     }

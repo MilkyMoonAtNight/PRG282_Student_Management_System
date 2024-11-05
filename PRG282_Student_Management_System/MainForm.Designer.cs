@@ -220,11 +220,11 @@
             this.grpbSummary.Controls.Add(this.lblSumText2);
             this.grpbSummary.Controls.Add(this.lblTotalStudents);
             this.grpbSummary.Controls.Add(this.lblSumText1);
-            this.grpbSummary.Location = new System.Drawing.Point(625, 414);
+            this.grpbSummary.Location = new System.Drawing.Point(625, 398);
             this.grpbSummary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpbSummary.Name = "grpbSummary";
             this.grpbSummary.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpbSummary.Size = new System.Drawing.Size(718, 55);
+            this.grpbSummary.Size = new System.Drawing.Size(718, 71);
             this.grpbSummary.TabIndex = 7;
             this.grpbSummary.TabStop = false;
             this.grpbSummary.Text = "Summary";
@@ -232,14 +232,14 @@
             // 
             // txtAvgAge
             // 
-            this.txtAvgAge.Location = new System.Drawing.Point(381, 12);
+            this.txtAvgAge.Location = new System.Drawing.Point(372, 34);
             this.txtAvgAge.Name = "txtAvgAge";
             this.txtAvgAge.Size = new System.Drawing.Size(93, 22);
             this.txtAvgAge.TabIndex = 5;
             // 
             // txtTotalStudents
             // 
-            this.txtTotalStudents.Location = new System.Drawing.Point(105, 12);
+            this.txtTotalStudents.Location = new System.Drawing.Point(105, 34);
             this.txtTotalStudents.Name = "txtTotalStudents";
             this.txtTotalStudents.Size = new System.Drawing.Size(93, 22);
             this.txtTotalStudents.TabIndex = 4;
@@ -255,7 +255,7 @@
             // lblSumText2
             // 
             this.lblSumText2.AutoSize = true;
-            this.lblSumText2.Location = new System.Drawing.Point(286, 18);
+            this.lblSumText2.Location = new System.Drawing.Point(267, 40);
             this.lblSumText2.Name = "lblSumText2";
             this.lblSumText2.Size = new System.Drawing.Size(89, 16);
             this.lblSumText2.TabIndex = 2;
@@ -272,7 +272,7 @@
             // lblSumText1
             // 
             this.lblSumText1.AutoSize = true;
-            this.lblSumText1.Location = new System.Drawing.Point(3, 18);
+            this.lblSumText1.Location = new System.Drawing.Point(3, 40);
             this.lblSumText1.Name = "lblSumText1";
             this.lblSumText1.Size = new System.Drawing.Size(96, 16);
             this.lblSumText1.TabIndex = 0;

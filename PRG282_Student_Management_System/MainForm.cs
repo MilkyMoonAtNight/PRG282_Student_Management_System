@@ -69,8 +69,12 @@ namespace PRG282_Project
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+
             ViewStudents viewStudents = new ViewStudents();
+
+            //View() returns string [] List used to populate studentData list.
             List<string[]> studentData =viewStudents.View();
+
             //Loop over each element (student) in studentData List and adds to DataTable.
             foreach (string[] student in studentData)
             {
@@ -87,9 +91,12 @@ namespace PRG282_Project
 
             //add results to text boxes for display
             txtTotalStudents.Text = TotalStudents.ToString();
-            txtAge.Text = AveAge.ToString();
-            
-            
+            txtAvgAge.Text = AveAge.ToString();
+
+            Console.WriteLine("Total Students: " + TotalStudents);
+            Console.WriteLine("Average Age: " + AveAge);
+
+
         }
 
 
