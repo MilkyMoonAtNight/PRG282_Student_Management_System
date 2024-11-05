@@ -72,7 +72,7 @@ namespace PRG282_Project
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-
+            
             ViewStudents viewStudents = new ViewStudents();
 
             //View() returns string [] List used to populate studentData list.
@@ -110,7 +110,7 @@ namespace PRG282_Project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+
             
             //Get updated data from text boxes
             int StudentID = int.Parse(txtStudentID.Text);
@@ -122,14 +122,9 @@ namespace PRG282_Project
             FileHandler updateStudents = new FileHandler();
             updateStudents.updatedInformationRetrieval(StudentID, Name, Age, Course);
 
+            
+            updateStudents.ReloadDataGridView(dgvDisplay,bs);
 
-            ViewStudents viewStudents = new ViewStudents();
-            List<string[]> studentData = viewStudents.View();
-            //Loop over each element (student) in studentData List and adds to DataTable.
-            foreach (string[] student in studentData)
-            {
-                table.Rows.Add(student);
-            }
 
             MessageBox.Show("Student information updated successfully.");
 
@@ -171,11 +166,12 @@ namespace PRG282_Project
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //getting the input that needs to be searched
             int StudentID = int.Parse(txtSearch.Text);
 
             //Creating object and sending input to search method
             FileHandler fileHandler = new FileHandler();
-            fileHandler.Search(StudentID);
+            fileHandler.Search(StudentID,dgvDisplay);
         }
     }
 }
