@@ -72,6 +72,8 @@ namespace PRG282_Project
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            //Clears dataTable rows, before displaying.
+            table.Rows.Clear();
             
             ViewStudents viewStudents = new ViewStudents();
 
@@ -174,5 +176,7 @@ namespace PRG282_Project
             FileHandler fileHandler = new FileHandler();
             fileHandler.Search(StudentID,dgvDisplay);
         }
+
+        
     }
 }

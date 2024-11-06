@@ -26,8 +26,9 @@ namespace PRG282_Student_Management_System.PresentationLayer
 
             foreach (string[] student in studentList)
             {
+                //checks if each student entry has all fields, to avoid "index out of bounds" exeption.
                 //use TryParse to convert student age (found at index 2) to an integer and add age to totalAge variable.
-                if(int.TryParse(student[2], out int age))
+                if(student.Length > 2 && int.TryParse(student[2], out int age))
                 {
                     totalAge += age;
                 }
@@ -42,7 +43,17 @@ namespace PRG282_Student_Management_System.PresentationLayer
             //Math.Round method used to round the AverageAge value to three decimal places.
             double AverageAge = totalStudents >0? Math.Round((double)totalAge/totalStudents,3) :0;
 
-           
+
+            string summaryPath = "summary.txt";
+
+            using (StreamWriter writer = new StreamWriter(summaryPath))
+            {
+                writer.WriteLine("Summary of Student data:");
+                writer.WriteLine("==================================");
+                writer.WriteLine($"Total students: {totalStudents}");
+                writer.WriteLine($"Average age of students: {AverageAge}");
+                writer.WriteLine("==================================");
+            }
 
 
 

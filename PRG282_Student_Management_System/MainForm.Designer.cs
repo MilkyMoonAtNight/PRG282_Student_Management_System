@@ -78,7 +78,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(133, 97);
+            this.btnAdd.Location = new System.Drawing.Point(59, 261);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(164, 36);
@@ -89,7 +89,7 @@
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(133, 168);
+            this.btnViewAll.Location = new System.Drawing.Point(117, 109);
             this.btnViewAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(164, 37);
@@ -100,7 +100,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(133, 246);
+            this.btnUpdate.Location = new System.Drawing.Point(117, 187);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(164, 36);
@@ -111,7 +111,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(133, 323);
+            this.btnDelete.Location = new System.Drawing.Point(117, 264);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(164, 36);
@@ -122,7 +122,7 @@
             // 
             // btnSummary
             // 
-            this.btnSummary.Location = new System.Drawing.Point(133, 405);
+            this.btnSummary.Location = new System.Drawing.Point(117, 346);
             this.btnSummary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSummary.Name = "btnSummary";
             this.btnSummary.Size = new System.Drawing.Size(164, 36);
@@ -141,6 +141,7 @@
             this.gpbInput.Controls.Add(this.lblAge);
             this.gpbInput.Controls.Add(this.lblName);
             this.gpbInput.Controls.Add(this.lblID);
+            this.gpbInput.Controls.Add(this.btnAdd);
             this.gpbInput.Location = new System.Drawing.Point(320, 97);
             this.gpbInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbInput.Name = "gpbInput";
@@ -151,7 +152,7 @@
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(96, 268);
+            this.txtCourse.Location = new System.Drawing.Point(133, 195);
             this.txtCourse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(136, 22);
@@ -159,7 +160,7 @@
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(96, 217);
+            this.txtAge.Location = new System.Drawing.Point(133, 144);
             this.txtAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(136, 22);
@@ -167,7 +168,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(96, 156);
+            this.txtName.Location = new System.Drawing.Point(133, 83);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(136, 22);
@@ -175,7 +176,7 @@
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(96, 92);
+            this.txtStudentID.Location = new System.Drawing.Point(133, 19);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(136, 22);
@@ -184,7 +185,7 @@
             // lblCourse
             // 
             this.lblCourse.AutoSize = true;
-            this.lblCourse.Location = new System.Drawing.Point(17, 270);
+            this.lblCourse.Location = new System.Drawing.Point(6, 197);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(50, 16);
             this.lblCourse.TabIndex = 3;
@@ -193,7 +194,7 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(17, 219);
+            this.lblAge.Location = new System.Drawing.Point(6, 146);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(32, 16);
             this.lblAge.TabIndex = 2;
@@ -202,16 +203,16 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(25, 161);
+            this.lblName.Location = new System.Drawing.Point(6, 89);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.Size = new System.Drawing.Size(68, 16);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Full Name";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(17, 92);
+            this.lblID.Location = new System.Drawing.Point(6, 19);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(65, 16);
             this.lblID.TabIndex = 0;
@@ -356,7 +357,6 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnViewAll);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvDisplay);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMain";
