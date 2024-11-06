@@ -77,14 +77,18 @@ namespace PRG282_Project.DataLayer
 
 
         //Searching for student ID to highlight student information in datagrid
-        public void Search(int IDSearch,DataGridView datagrid) 
+        public void Search(int IDSearch,DataGridView datagrid, BindingSource bs) 
         {
+            //calling reload datagridview to load an updated version of the textfile on the datagrid before the next search
+            ReloadDataGridView(datagrid,bs);
+
             //put file path in a variable
             string filepath = @"..\..\Students\students.txt";
 
             // Read all lines from the file and add it to a list
-            var line = File.ReadAllLines(filepath).ToList();//.to list creates a list
+            var line = File.ReadAllLines(filepath).ToList();
 
+            
             // looping through all the lines
             for (int i = 0; i < line.Count; i++)
             {
@@ -100,14 +104,16 @@ namespace PRG282_Project.DataLayer
                         datagrid.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                         break;
                     }
+
+
                 }
+
+
             }
 
-
+           
 
         }
-
-
 
 
 
@@ -117,6 +123,8 @@ namespace PRG282_Project.DataLayer
             //put file path in a variable
             string file = @"..\..\Students\students.txt";
 
+            //declare bool
+            bool updated = false;   
             // Read all lines from the file and add it to a list
             var lines = File.ReadAllLines(file).ToList();//.to list creates a list
 
@@ -129,20 +137,33 @@ namespace PRG282_Project.DataLayer
                 // Ensure the line has the correct number of parts 
                 if (parts.Length == 4)
                 {
-                   
+
                     if (int.Parse(parts[0]) == ID)
                     {
                         lines[i] = $"{ID},{name},{Age},{course}"; // Update line with new details
+                        MessageBox.Show("Student information updated successfully.");
+                        updated = true; 
                         break;
                     }
+                    
                 }
             }
 
-            // Write the updated lines back to the file
-            File.WriteAllLines(file, lines);
+            if (updated)
+            {
 
-            
-              }
+                // Write the updated lines back to the file
+                File.WriteAllLines(file, lines);
+            }
+            else
+            {
+                MessageBox.Show("Update of student ID not allowed,Please contact the administrator");
+               
+            }
+
+
+
+        }
 
 
 

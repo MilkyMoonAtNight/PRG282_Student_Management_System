@@ -128,7 +128,6 @@ namespace PRG282_Project
             updateStudents.ReloadDataGridView(dgvDisplay,bs);
 
 
-            MessageBox.Show("Student information updated successfully.");
 
         }
         
@@ -174,7 +173,7 @@ namespace PRG282_Project
 
             //Creating object and sending input to search method
             FileHandler fileHandler = new FileHandler();
-            fileHandler.Search(StudentID,dgvDisplay);
+            fileHandler.Search(StudentID,dgvDisplay,bs);
         }
 
         

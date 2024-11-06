@@ -1,9 +1,9 @@
-500003, Daniel Claassen,29, Bachelor of IT
-500002, Chloe Davis,23, Certificate: IT
+500003, Daniel Brown,26, Bachelor of IT
+500002, Chloe Davis,24, Certificate: IT
 500003, Daniel Brown, 25, Bachelor of IT
 500004, Emily White, 33, Bachelor of IT (Part-Time)
 500005, Frank Taylor, 19, National Certificate: IT
-500006, Grace Harris, 21, Bachelor of Computing
+500006, Grace Harris,23, Bachelor of Computing
 500007, Henry Wilson, 29, Diploma in IT
 
 
@@ -15,3 +15,5 @@
 123458,Hein Richter,19,BComp
 
 458978,Sarah Mahlangu,19,BIT
+
+500055, Daniel Brown,25, Bachelor of IT
