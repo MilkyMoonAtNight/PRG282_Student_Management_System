@@ -63,7 +63,9 @@ namespace PRG282_Student_Management_System
                                     {
                                         MessageBox.Show($"Welcome {txtfullname.Text}!", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         frmMain frmMain = new frmMain();
-                                        frmMain.ShowDialog();
+                                        this.Hide();//hides the login form
+                                        frmMain.FormClosed += (s, args) => this.Close();// closes the login form when the main form closes
+                                        frmMain.ShowDialog();// opens the main form
                                     }
                                     else
                                     {

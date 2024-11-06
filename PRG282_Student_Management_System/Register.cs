@@ -53,8 +53,8 @@ namespace PRG282_Student_Management_System
                 {
                     using (var sw = new StreamWriter(path, true))
                     {
-                        MessageBox.Show($"Fullname: {txtfullname.Text}, Admin Number: {lblnewnum.Text}","Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        sw.WriteLine($"{txtfullname.Text.ToLower()},{lblnewnum.Text},{txtpass.Text},{cbxcourses.Text},{destinationPath}");
+                        MessageBox.Show($"Registration successful:\nFullname: {txtfullname.Text}, Admin Number: {lblnewnum.Text}","Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        sw.WriteLine($"{txtfullname.Text.ToLower()},{lblnewnum.Text},{txtpass.Text},{cmbRole.Text},{destinationPath}");
                     }
                     this.Close();
                 }
@@ -115,8 +115,9 @@ namespace PRG282_Student_Management_System
         private void Register_Load(object sender, EventArgs e)
         {
             GenerateRandomNumber();
-            cbxcourses.Items.Add("BIT: Batchelors of Information Tech");
-            cbxcourses.Items.Add("BCOM: Batchelors of Computing"); 
+            cmbRole.Items.Add("Admin");
+            cmbRole.Items.Add("Lecturer"); 
+            cmbRole.SelectedIndex = 0;
         }
 
         private void cbxPassShow_CheckedChanged(object sender, EventArgs e)

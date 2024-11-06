@@ -20,7 +20,7 @@ namespace PRG282_Project.PresentationLayer
                 StudentID = form.txtStudentID.Text,
                 Name = form.txtName.Text,
                 Age = form.txtAge.Text,
-                Course = form.txtCourse.Text
+                Course = form.cmbCourse.Text
             };
         }
         //method to clear all text boxes
@@ -29,7 +29,7 @@ namespace PRG282_Project.PresentationLayer
             form.txtName.Clear();
             form.txtStudentID.Clear();
             form.txtAge.Clear();
-            form.txtCourse.Clear();
+            form.cmbCourse.SelectedIndex=0;
         }
 
     }

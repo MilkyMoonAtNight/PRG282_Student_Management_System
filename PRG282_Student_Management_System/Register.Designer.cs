@@ -40,7 +40,7 @@
             this.Files = new System.Windows.Forms.OpenFileDialog();
             this.lblfile = new System.Windows.Forms.Label();
             this.lblcourse = new System.Windows.Forms.Label();
-            this.cbxcourses = new System.Windows.Forms.ComboBox();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.lblnewnum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxreg)).BeginInit();
             this.SuspendLayout();
@@ -48,68 +48,68 @@
             // cbxPassShow
             // 
             this.cbxPassShow.AutoSize = true;
-            this.cbxPassShow.Location = new System.Drawing.Point(396, 150);
-            this.cbxPassShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxPassShow.Location = new System.Drawing.Point(446, 188);
+            this.cbxPassShow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxPassShow.Name = "cbxPassShow";
-            this.cbxPassShow.Size = new System.Drawing.Size(125, 20);
-            this.cbxPassShow.TabIndex = 16;
+            this.cbxPassShow.Size = new System.Drawing.Size(148, 24);
+            this.cbxPassShow.TabIndex = 2;
             this.cbxPassShow.Text = "Show Password";
             this.cbxPassShow.UseVisualStyleBackColor = true;
             this.cbxPassShow.CheckedChanged += new System.EventHandler(this.cbxPassShow_CheckedChanged);
             // 
             // txtpass
             // 
-            this.txtpass.Location = new System.Drawing.Point(396, 118);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.Location = new System.Drawing.Point(446, 148);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(160, 22);
-            this.txtpass.TabIndex = 15;
+            this.txtpass.Size = new System.Drawing.Size(180, 26);
+            this.txtpass.TabIndex = 1;
             this.txtpass.UseSystemPasswordChar = true;
             // 
             // lblpass
             // 
             this.lblpass.AutoSize = true;
-            this.lblpass.Location = new System.Drawing.Point(237, 118);
+            this.lblpass.Location = new System.Drawing.Point(267, 148);
             this.lblpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(70, 16);
+            this.lblpass.Size = new System.Drawing.Size(82, 20);
             this.lblpass.TabIndex = 14;
             this.lblpass.Text = "Password:";
             // 
             // lblnumber
             // 
             this.lblnumber.AutoSize = true;
-            this.lblnumber.Location = new System.Drawing.Point(237, 87);
+            this.lblnumber.Location = new System.Drawing.Point(267, 109);
             this.lblnumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnumber.Name = "lblnumber";
-            this.lblnumber.Size = new System.Drawing.Size(99, 16);
+            this.lblnumber.Size = new System.Drawing.Size(118, 20);
             this.lblnumber.TabIndex = 13;
             this.lblnumber.Text = "Admin Number:";
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(237, 53);
+            this.lblname.Location = new System.Drawing.Point(267, 66);
             this.lblname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(71, 16);
+            this.lblname.Size = new System.Drawing.Size(87, 20);
             this.lblname.TabIndex = 12;
-            this.lblname.Text = "Full Name:";
+            this.lblname.Text = "Username:";
             // 
             // txtfullname
             // 
-            this.txtfullname.Location = new System.Drawing.Point(396, 46);
-            this.txtfullname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfullname.Location = new System.Drawing.Point(446, 58);
+            this.txtfullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(160, 22);
-            this.txtfullname.TabIndex = 10;
+            this.txtfullname.Size = new System.Drawing.Size(180, 26);
+            this.txtfullname.TabIndex = 0;
             // 
             // btnconfirm
             // 
-            this.btnconfirm.Location = new System.Drawing.Point(353, 300);
-            this.btnconfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnconfirm.Location = new System.Drawing.Point(397, 375);
+            this.btnconfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnconfirm.Name = "btnconfirm";
-            this.btnconfirm.Size = new System.Drawing.Size(100, 28);
+            this.btnconfirm.Size = new System.Drawing.Size(112, 35);
             this.btnconfirm.TabIndex = 17;
             this.btnconfirm.Text = "Confirm!";
             this.btnconfirm.UseVisualStyleBackColor = true;
@@ -117,21 +117,21 @@
             // 
             // btnPict
             // 
-            this.btnPict.Location = new System.Drawing.Point(271, 178);
-            this.btnPict.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPict.Location = new System.Drawing.Point(305, 222);
+            this.btnPict.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPict.Name = "btnPict";
-            this.btnPict.Size = new System.Drawing.Size(261, 28);
-            this.btnPict.TabIndex = 18;
+            this.btnPict.Size = new System.Drawing.Size(294, 35);
+            this.btnPict.TabIndex = 3;
             this.btnPict.Text = "<Select Picture>";
             this.btnPict.UseVisualStyleBackColor = true;
             this.btnPict.Click += new System.EventHandler(this.btnPict_Click);
             // 
             // pbxreg
             // 
-            this.pbxreg.Location = new System.Drawing.Point(565, 46);
-            this.pbxreg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxreg.Location = new System.Drawing.Point(636, 58);
+            this.pbxreg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbxreg.Name = "pbxreg";
-            this.pbxreg.Size = new System.Drawing.Size(315, 283);
+            this.pbxreg.Size = new System.Drawing.Size(354, 354);
             this.pbxreg.TabIndex = 19;
             this.pbxreg.TabStop = false;
             this.pbxreg.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -142,10 +142,10 @@
             // 
             // lblfile
             // 
-            this.lblfile.Location = new System.Drawing.Point(237, 210);
+            this.lblfile.Location = new System.Drawing.Point(267, 262);
             this.lblfile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfile.Name = "lblfile";
-            this.lblfile.Size = new System.Drawing.Size(320, 16);
+            this.lblfile.Size = new System.Drawing.Size(360, 20);
             this.lblfile.TabIndex = 20;
             this.lblfile.Text = "No File Chosen.";
             this.lblfile.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -154,39 +154,40 @@
             // lblcourse
             // 
             this.lblcourse.AutoSize = true;
-            this.lblcourse.Location = new System.Drawing.Point(336, 239);
+            this.lblcourse.Location = new System.Drawing.Point(378, 299);
             this.lblcourse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcourse.Name = "lblcourse";
-            this.lblcourse.Size = new System.Drawing.Size(121, 16);
+            this.lblcourse.Size = new System.Drawing.Size(122, 20);
             this.lblcourse.TabIndex = 21;
-            this.lblcourse.Text = "Select your course:";
+            this.lblcourse.Text = "Select your role:";
             // 
-            // cbxcourses
+            // cmbRole
             // 
-            this.cbxcourses.FormattingEnabled = true;
-            this.cbxcourses.Location = new System.Drawing.Point(241, 258);
-            this.cbxcourses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbxcourses.Name = "cbxcourses";
-            this.cbxcourses.Size = new System.Drawing.Size(315, 24);
-            this.cbxcourses.TabIndex = 22;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(271, 322);
+            this.cmbRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(354, 28);
+            this.cmbRole.TabIndex = 4;
             // 
             // lblnewnum
             // 
             this.lblnewnum.AutoSize = true;
-            this.lblnewnum.Location = new System.Drawing.Point(444, 87);
+            this.lblnewnum.Location = new System.Drawing.Point(500, 109);
             this.lblnewnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnewnum.Name = "lblnewnum";
-            this.lblnewnum.Size = new System.Drawing.Size(49, 16);
+            this.lblnewnum.Size = new System.Drawing.Size(63, 20);
             this.lblnewnum.TabIndex = 23;
             this.lblnewnum.Text = "000000";
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1222, 554);
             this.Controls.Add(this.lblnewnum);
-            this.Controls.Add(this.cbxcourses);
+            this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.lblcourse);
             this.Controls.Add(this.lblfile);
             this.Controls.Add(this.pbxreg);
@@ -198,8 +199,9 @@
             this.Controls.Add(this.lblnumber);
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.txtfullname);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxreg)).EndInit();
@@ -222,7 +224,7 @@
         private System.Windows.Forms.OpenFileDialog Files;
         private System.Windows.Forms.Label lblfile;
         private System.Windows.Forms.Label lblcourse;
-        private System.Windows.Forms.ComboBox cbxcourses;
+        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Label lblnewnum;
     }
 }

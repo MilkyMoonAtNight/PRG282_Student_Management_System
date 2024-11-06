@@ -1,2 +1,2 @@
-﻿Tarina,123456,123,BCOM: Bachelor's of Computing,..\..\Users\Pictures\tarina_20241105_082903.png
-demica,307703,Smit,BCOM: Batchelors of Computing,
+﻿Tarina,123456,123,Admin,..\..\Users\Pictures\tarina_20241105_082903.png
+demica,307703,Smit,Admin,kaho,893223,James,Lecturer,

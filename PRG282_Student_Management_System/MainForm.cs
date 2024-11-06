@@ -26,10 +26,11 @@ namespace PRG282_Project
         }
         BindingSource bs = new BindingSource();//initiate a new binding source
         DataTable table = new DataTable(); //initiate a new table
-        int IndexValue = 0;
+
         private void frmMain_Load(object sender, EventArgs e)
         {
-          
+            //sets the default value of the combo box
+            cmbCourse.SelectedIndex = 0;
             //Create a table when form loads
             table.Columns.Add("Student ID",typeof(string));
             table.Columns.Add("Name", typeof(string));
@@ -50,7 +51,7 @@ namespace PRG282_Project
             public string Age { get; set; }
             public string Course { get; set; }
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -58,18 +59,11 @@ namespace PRG282_Project
             UserInput userInput = new UserInput(); //creates a userinput object
             StudentInfo studentInfo = userInput.GetInput(this); //stores the inputs in the studentinfo class
 
-
-            //calls the add student method in the file handler class --> use the fields from the
+            //calls the add student method in the file handler class
             fileHandler.AddStudent(studentInfo.StudentID, studentInfo.Name, studentInfo.Age, studentInfo.Course, this);
-
-            //calls method from the userinput to clear text boxes
-            userInput.CLearTextBoxes(this);
-
-            
         }
 
         //View students button => calls View method, from ViewStudents Class in PresentationLayer.
-
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             //Clears dataTable rows, before displaying.
@@ -112,29 +106,32 @@ namespace PRG282_Project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-            
             //Get updated data from text boxes
-            int StudentID = int.Parse(txtStudentID.Text);
+            string StudentID = txtStudentID.Text;
             string Name = txtName.Text;
-            int Age = int.Parse(txtAge.Text);
-            string Course = txtCourse.Text;
+            string Age = txtAge.Text;
+            string Course = cmbCourse.Text;
 
             //create object for Update student class to send the retrieved data
             FileHandler updateStudents = new FileHandler();
-            updateStudents.updatedInformationRetrieval(StudentID, Name, Age, Course);
+
+            updateStudents.updatedInformationRetrieval(StudentID, Name, Age, Course, this);
 
             
             updateStudents.ReloadDataGridView(dgvDisplay,bs);
 
-
+            UserInput userInput = new UserInput(); //creates a userinput object
+            userInput.CLearTextBoxes(this);//calls method from the userinput to clear text boxes
 
         }
-        
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             FileHandler fh = new FileHandler();
             fh.DeleteStudent(this);
+
+            UserInput userInput = new UserInput(); //creates a userinput object
+            userInput.CLearTextBoxes(this);//calls method from the userinput to clear text boxes
         }
 
         //method moves to the previous entry in the data grid view table
@@ -160,10 +157,7 @@ namespace PRG282_Project
             txtStudentID.Text = row.Cells[0].Value.ToString();
             txtName.Text = row.Cells[1].Value.ToString();
             txtAge.Text = row.Cells[2].Value.ToString();
-            txtCourse.Text = row.Cells[3].Value.ToString();
-
-
-            
+            cmbCourse.Text = row.Cells[3].Value.ToString();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
