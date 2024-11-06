@@ -132,7 +132,8 @@ namespace PRG282_Project
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            FileHandler fh = new FileHandler();
+            fh.DeleteStudent(this);
         }
 
         //method moves to the previous entry in the data grid view table

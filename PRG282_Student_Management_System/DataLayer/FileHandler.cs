@@ -166,7 +166,40 @@ namespace PRG282_Project.DataLayer
             // Refresh the DataGridView to reflect the changes
             dgvDisplay.Refresh();
         }
-        
+
+        public void DeleteStudent(frmMain form)
+        {
+            string file = @"..\..\Students\students.txt";
+
+            if (File.Exists(file)) // Check if file exists
+            {
+                InputValidation iv = new InputValidation();
+                string id = form.txtStudentID.Text;
+                string name = form.txtName.Text;
+                string age = form.txtAge.Text;
+                string course = form.txtCourse.Text;
+
+                bool notnull = iv.noEmptyFields(id, name, age, course); // true if no empty fields
+                if (notnull)
+                {
+                    List<string> lines = File.ReadAllLines(file).ToList();
+
+                    // Remove lines where the first column (ID) matches ID
+                    lines.RemoveAll(line => line.Split(',')[0] == id);
+
+                    // Write the remaining lines back to the file
+                    File.WriteAllLines(file, lines);
+                    MessageBox.Show($"Delete successful. {name} was deleted.");
+
+                }
+                else
+                {
+                    MessageBox.Show("Please select a student with all fields.");
+                }
+            }
+        }
+
+
 
 
 
