@@ -1,2 +1,7 @@
 ﻿Tarina,123456,123,Admin,..\..\Users\Pictures\tarina_20241105_082903.png
 demica,307703,Smit,Admin,kaho,893223,James,Lecturer,
+iwan,202863,Groen,Admin,..\..\Users\Pictures\Dean_20241107_173118.png
+iwan,176893,Groen,Admin,C:\Users\Iwang\Pictures\Dean_20241107_174051.png
+pieter,504455,Nel,Lecturer,
+tiaan gummy,887695,atr,Admin,
+pancake,732947,123,Lecturer,C:\Users\Iwang\Pictures\Iwan_20241107_175704.png

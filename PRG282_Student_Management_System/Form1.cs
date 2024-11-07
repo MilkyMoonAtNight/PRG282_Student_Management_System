@@ -47,17 +47,6 @@ namespace PRG282_Student_Management_System
                                 //student number matches
                                 if (parts[1] == txtstudentno.Text)
                                 {
-                                    try
-                                    {
-                                        // Load the image file path and display it
-                                        pbxlogin.Image = Image.FromFile(parts[4]);
-                                        pbxlogin.SizeMode = PictureBoxSizeMode.StretchImage;
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        MessageBox.Show("Error loading image: " + ex.Message, "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
-
                                     //password matches
                                     if (parts[2] == txtpass.Text)
                                     {
@@ -122,6 +111,11 @@ namespace PRG282_Student_Management_System
             {
                 txtpass.UseSystemPasswordChar = true;
             }
+        }
+
+        private void pbxlogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

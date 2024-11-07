@@ -40,16 +40,13 @@
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialog3 = new System.Windows.Forms.FolderBrowserDialog();
             this.cbxPassShow = new System.Windows.Forms.CheckBox();
-            this.pbxlogin = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(314, 342);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnlogin.Location = new System.Drawing.Point(209, 222);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(112, 35);
+            this.btnlogin.Size = new System.Drawing.Size(75, 23);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "Log In!";
             this.btnlogin.UseVisualStyleBackColor = true;
@@ -57,27 +54,24 @@
             // 
             // txtfullname
             // 
-            this.txtfullname.Location = new System.Drawing.Point(370, 175);
-            this.txtfullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtfullname.Location = new System.Drawing.Point(247, 114);
             this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(148, 26);
+            this.txtfullname.Size = new System.Drawing.Size(100, 20);
             this.txtfullname.TabIndex = 0;
             // 
             // txtstudentno
             // 
-            this.txtstudentno.Location = new System.Drawing.Point(370, 222);
-            this.txtstudentno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtstudentno.Location = new System.Drawing.Point(247, 144);
             this.txtstudentno.Name = "txtstudentno";
-            this.txtstudentno.Size = new System.Drawing.Size(148, 26);
+            this.txtstudentno.Size = new System.Drawing.Size(100, 20);
             this.txtstudentno.TabIndex = 1;
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(222, 185);
-            this.lblname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblname.Location = new System.Drawing.Point(148, 120);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(87, 20);
+            this.lblname.Size = new System.Drawing.Size(58, 13);
             this.lblname.TabIndex = 3;
             this.lblname.Text = "Username:";
             this.lblname.Click += new System.EventHandler(this.label1_Click);
@@ -85,19 +79,17 @@
             // lblnumber
             // 
             this.lblnumber.AutoSize = true;
-            this.lblnumber.Location = new System.Drawing.Point(222, 228);
-            this.lblnumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnumber.Location = new System.Drawing.Point(148, 148);
             this.lblnumber.Name = "lblnumber";
-            this.lblnumber.Size = new System.Drawing.Size(118, 20);
+            this.lblnumber.Size = new System.Drawing.Size(79, 13);
             this.lblnumber.TabIndex = 4;
             this.lblnumber.Text = "Admin Number:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(314, 386);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(209, 251);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Register!";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,49 +98,36 @@
             // lblpass
             // 
             this.lblpass.AutoSize = true;
-            this.lblpass.Location = new System.Drawing.Point(222, 266);
-            this.lblpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblpass.Location = new System.Drawing.Point(148, 173);
             this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(82, 20);
+            this.lblpass.Size = new System.Drawing.Size(56, 13);
             this.lblpass.TabIndex = 7;
             this.lblpass.Text = "Password:";
             // 
             // txtpass
             // 
-            this.txtpass.Location = new System.Drawing.Point(370, 266);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtpass.Location = new System.Drawing.Point(247, 173);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(148, 26);
+            this.txtpass.Size = new System.Drawing.Size(100, 20);
             this.txtpass.TabIndex = 2;
             this.txtpass.UseSystemPasswordChar = true;
             // 
             // cbxPassShow
             // 
             this.cbxPassShow.AutoSize = true;
-            this.cbxPassShow.Location = new System.Drawing.Point(374, 306);
-            this.cbxPassShow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxPassShow.Location = new System.Drawing.Point(249, 199);
             this.cbxPassShow.Name = "cbxPassShow";
-            this.cbxPassShow.Size = new System.Drawing.Size(148, 24);
+            this.cbxPassShow.Size = new System.Drawing.Size(102, 17);
             this.cbxPassShow.TabIndex = 3;
             this.cbxPassShow.Text = "Show Password";
             this.cbxPassShow.UseVisualStyleBackColor = true;
             this.cbxPassShow.CheckedChanged += new System.EventHandler(this.cbxPassShow_CheckedChanged);
             // 
-            // pbxlogin
-            // 
-            this.pbxlogin.Location = new System.Drawing.Point(546, 178);
-            this.pbxlogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbxlogin.Name = "pbxlogin";
-            this.pbxlogin.Size = new System.Drawing.Size(214, 245);
-            this.pbxlogin.TabIndex = 10;
-            this.pbxlogin.TabStop = false;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 692);
-            this.Controls.Add(this.pbxlogin);
+            this.ClientSize = new System.Drawing.Size(716, 450);
             this.Controls.Add(this.cbxPassShow);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.lblpass);
@@ -158,12 +137,10 @@
             this.Controls.Add(this.txtstudentno);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.btnlogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,7 +160,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog3;
         private System.Windows.Forms.CheckBox cbxPassShow;
-        private System.Windows.Forms.PictureBox pbxlogin;
     }
 }
 
