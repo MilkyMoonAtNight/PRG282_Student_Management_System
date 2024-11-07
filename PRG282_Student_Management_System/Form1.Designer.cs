@@ -44,80 +44,95 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(209, 222);
+            this.btnlogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnlogin.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Location = new System.Drawing.Point(152, 180);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(75, 23);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "Log In!";
-            this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtfullname
             // 
-            this.txtfullname.Location = new System.Drawing.Point(247, 114);
+            this.txtfullname.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtfullname.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtfullname.Location = new System.Drawing.Point(205, 75);
             this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(100, 20);
+            this.txtfullname.Size = new System.Drawing.Size(100, 25);
             this.txtfullname.TabIndex = 0;
             // 
             // txtstudentno
             // 
-            this.txtstudentno.Location = new System.Drawing.Point(247, 144);
+            this.txtstudentno.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtstudentno.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtstudentno.Location = new System.Drawing.Point(205, 102);
             this.txtstudentno.Name = "txtstudentno";
-            this.txtstudentno.Size = new System.Drawing.Size(100, 20);
+            this.txtstudentno.Size = new System.Drawing.Size(100, 25);
             this.txtstudentno.TabIndex = 1;
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(148, 120);
+            this.lblname.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Location = new System.Drawing.Point(91, 78);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(58, 13);
+            this.lblname.Size = new System.Drawing.Size(73, 17);
             this.lblname.TabIndex = 3;
             this.lblname.Text = "Username:";
+            this.lblname.UseMnemonic = false;
             this.lblname.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblnumber
             // 
             this.lblnumber.AutoSize = true;
-            this.lblnumber.Location = new System.Drawing.Point(148, 148);
+            this.lblnumber.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblnumber.Location = new System.Drawing.Point(91, 102);
             this.lblnumber.Name = "lblnumber";
-            this.lblnumber.Size = new System.Drawing.Size(79, 13);
+            this.lblnumber.Size = new System.Drawing.Size(108, 17);
             this.lblnumber.TabIndex = 4;
             this.lblnumber.Text = "Admin Number:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(209, 251);
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(152, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Register!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblpass
             // 
             this.lblpass.AutoSize = true;
-            this.lblpass.Location = new System.Drawing.Point(148, 173);
+            this.lblpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblpass.Location = new System.Drawing.Point(94, 128);
             this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(56, 13);
+            this.lblpass.Size = new System.Drawing.Size(70, 17);
             this.lblpass.TabIndex = 7;
             this.lblpass.Text = "Password:";
             // 
             // txtpass
             // 
-            this.txtpass.Location = new System.Drawing.Point(247, 173);
+            this.txtpass.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtpass.Location = new System.Drawing.Point(205, 128);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(100, 20);
+            this.txtpass.Size = new System.Drawing.Size(100, 25);
             this.txtpass.TabIndex = 2;
             this.txtpass.UseSystemPasswordChar = true;
             // 
             // cbxPassShow
             // 
             this.cbxPassShow.AutoSize = true;
-            this.cbxPassShow.Location = new System.Drawing.Point(249, 199);
+            this.cbxPassShow.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbxPassShow.Location = new System.Drawing.Point(187, 154);
             this.cbxPassShow.Name = "cbxPassShow";
-            this.cbxPassShow.Size = new System.Drawing.Size(102, 17);
+            this.cbxPassShow.Size = new System.Drawing.Size(131, 19);
             this.cbxPassShow.TabIndex = 3;
             this.cbxPassShow.Text = "Show Password";
             this.cbxPassShow.UseVisualStyleBackColor = true;
@@ -127,7 +142,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 450);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(447, 330);
             this.Controls.Add(this.cbxPassShow);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.lblpass);

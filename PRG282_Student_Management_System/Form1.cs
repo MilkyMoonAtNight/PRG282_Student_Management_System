@@ -44,9 +44,10 @@ namespace PRG282_Student_Management_System
                             {
                                 userFound = true;
 
-                                //student number matches
+                                //admin number matches
                                 if (parts[1] == txtstudentno.Text)
                                 {
+
                                     //password matches
                                     if (parts[2] == txtpass.Text)
                                     {
@@ -114,6 +115,11 @@ namespace PRG282_Student_Management_System
         }
 
         private void pbxlogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

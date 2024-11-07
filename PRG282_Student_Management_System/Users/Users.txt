@@ -5,3 +5,4 @@ iwan,176893,Groen,Admin,C:\Users\Iwang\Pictures\Dean_20241107_174051.png
 pieter,504455,Nel,Lecturer,
 tiaan gummy,887695,atr,Admin,
 pancake,732947,123,Lecturer,C:\Users\Iwang\Pictures\Iwan_20241107_175704.png
+pietie,836665,123,Admin,C:\Users\Iwang\Pictures\JP_20241107_181036.png
