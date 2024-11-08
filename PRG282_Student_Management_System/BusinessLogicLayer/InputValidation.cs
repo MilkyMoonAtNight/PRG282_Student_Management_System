@@ -17,14 +17,23 @@ namespace PRG282_Project.BusinessLogicLayer
     {//method that tests if the student id is already in the text file
         public bool DoesStudentIDExist(string id)
         {
-            FileHandler fileHandler = new FileHandler();
-            string[] lines = fileHandler.read();
-            for (int i = 0; i <= lines.Length-1; i++)
+            try
             {
-                if (lines[i].Contains(id))
+                FileHandler fileHandler = new FileHandler();
+                //reads all the lines from the text file into an array
+                string[] lines = fileHandler.read();
+                //loops through the array and checks if the  id is already in the array
+                foreach (string line in lines)
                 {
-                    return true;
+                    if (line.Contains(id))
+                    {
+                        return true;
+                    }
                 }
+            }
+            catch (IOException ex)// throws an exception if there was a problem when reading from the text file
+            {
+                MessageBox.Show("Error reading the student file. " + ex.Message, "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
         }
@@ -52,32 +61,25 @@ namespace PRG282_Project.BusinessLogicLayer
             return true;
         }
 
-        //method that tests if the age is only a number and that the age is between 18 and 100
+        //method that tests if the age is an integer and that the age is between 18 and 100
         public bool isAgeValid(string age, TextBox txtAge)
         {
-            bool isValid=true;
-            //loop through each character in the string and ensure that it contains a number
-            foreach (char character in age)
+            try
             {
-                if (character < '0' || character > '9')
+                int iAge = int.Parse(age);
+                //tests if the age is in the valid range
+                if (iAge < 18 || iAge >= 100)
                 {
-                    isValid = false;
-                    break;
+                    MessageBox.Show("Invalid age. Please enter a valid age.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtAge.Clear();
+                    return false;
                 }
-                    int iage = int.Parse(age);//convert strin to int
-                    //checks if the age is in a valid range
-                    if (iage < 18 || iage >= 100)
-                    {
-                        isValid = false;
-                    }
             }
-
-            if (!isValid)
+            catch (FormatException) //throws an exception if age is not a valid integer
             {
-                MessageBox.Show("Invalid age. Please enter a valid age.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid age format. Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAge.Clear();
                 return false;
-                
             }
             return true;
         }

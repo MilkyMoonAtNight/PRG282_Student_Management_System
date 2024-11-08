@@ -45,10 +45,11 @@
             // btnlogin
             // 
             this.btnlogin.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnlogin.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(152, 180);
+            this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Location = new System.Drawing.Point(228, 277);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(75, 23);
+            this.btnlogin.Size = new System.Drawing.Size(112, 45);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "Log In!";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -58,27 +59,30 @@
             // 
             this.txtfullname.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtfullname.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtfullname.Location = new System.Drawing.Point(205, 75);
+            this.txtfullname.Location = new System.Drawing.Point(308, 115);
+            this.txtfullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(100, 25);
+            this.txtfullname.Size = new System.Drawing.Size(148, 33);
             this.txtfullname.TabIndex = 0;
             // 
             // txtstudentno
             // 
             this.txtstudentno.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtstudentno.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtstudentno.Location = new System.Drawing.Point(205, 102);
+            this.txtstudentno.Location = new System.Drawing.Point(308, 157);
+            this.txtstudentno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtstudentno.Name = "txtstudentno";
-            this.txtstudentno.Size = new System.Drawing.Size(100, 25);
+            this.txtstudentno.Size = new System.Drawing.Size(148, 33);
             this.txtstudentno.TabIndex = 1;
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(91, 78);
+            this.lblname.Location = new System.Drawing.Point(136, 120);
+            this.lblname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(73, 17);
+            this.lblname.Size = new System.Drawing.Size(111, 28);
             this.lblname.TabIndex = 3;
             this.lblname.Text = "Username:";
             this.lblname.UseMnemonic = false;
@@ -88,19 +92,21 @@
             // 
             this.lblnumber.AutoSize = true;
             this.lblnumber.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblnumber.Location = new System.Drawing.Point(91, 102);
+            this.lblnumber.Location = new System.Drawing.Point(136, 157);
+            this.lblnumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnumber.Name = "lblnumber";
-            this.lblnumber.Size = new System.Drawing.Size(108, 17);
+            this.lblnumber.Size = new System.Drawing.Size(163, 28);
             this.lblnumber.TabIndex = 4;
             this.lblnumber.Text = "Admin Number:";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(152, 209);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(228, 332);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 45);
             this.button1.TabIndex = 5;
             this.button1.Text = "Register!";
             this.button1.UseVisualStyleBackColor = false;
@@ -110,9 +116,10 @@
             // 
             this.lblpass.AutoSize = true;
             this.lblpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblpass.Location = new System.Drawing.Point(94, 128);
+            this.lblpass.Location = new System.Drawing.Point(141, 197);
+            this.lblpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(70, 17);
+            this.lblpass.Size = new System.Drawing.Size(105, 28);
             this.lblpass.TabIndex = 7;
             this.lblpass.Text = "Password:";
             // 
@@ -120,19 +127,21 @@
             // 
             this.txtpass.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtpass.Location = new System.Drawing.Point(205, 128);
+            this.txtpass.Location = new System.Drawing.Point(308, 197);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(100, 25);
+            this.txtpass.Size = new System.Drawing.Size(148, 33);
             this.txtpass.TabIndex = 2;
             this.txtpass.UseSystemPasswordChar = true;
             // 
             // cbxPassShow
             // 
             this.cbxPassShow.AutoSize = true;
-            this.cbxPassShow.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cbxPassShow.Location = new System.Drawing.Point(187, 154);
+            this.cbxPassShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbxPassShow.Location = new System.Drawing.Point(280, 237);
+            this.cbxPassShow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxPassShow.Name = "cbxPassShow";
-            this.cbxPassShow.Size = new System.Drawing.Size(131, 19);
+            this.cbxPassShow.Size = new System.Drawing.Size(192, 29);
             this.cbxPassShow.TabIndex = 3;
             this.cbxPassShow.Text = "Show Password";
             this.cbxPassShow.UseVisualStyleBackColor = true;
@@ -140,10 +149,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(447, 330);
+            this.ClientSize = new System.Drawing.Size(670, 508);
             this.Controls.Add(this.cbxPassShow);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.lblpass);
@@ -153,6 +162,7 @@
             this.Controls.Add(this.txtstudentno);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.btnlogin);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
