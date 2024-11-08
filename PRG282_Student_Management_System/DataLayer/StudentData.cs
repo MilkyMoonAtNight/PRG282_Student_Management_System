@@ -21,15 +21,40 @@ namespace PRG282_Student_Management_System.BusinessLogicLayer
         }
 
         //Method to parse data from student.txt file and split into List of arrays:
-        private void LoadStudentData() { 
+        private void LoadStudentData()
+        {
             studentList = new List<string[]>();
-            string[]students = File.ReadAllLines(path);
 
-            foreach (string student in students)
+            //Try, catch for File operations error handling
+            try
             {
-                string[] fields = student.Split(',');
-                studentList.Add(fields);
+                string[] students = File.ReadAllLines(path);
+
+                foreach (string student in students)
+                {
+                    string[] fields = student.Split(',');
+                    studentList.Add(fields);
+                }
             }
+
+            //To catch cases where file doesn't exist.
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine($"The file is not found at the specified path: {path}.");
+                Console.WriteLine($"Error details: {ex.Message}");
+            }
+            //Permission error
+            catch (UnauthorizedAccessException ex)
+            {
+                Console.WriteLine($"User does not have permission to access this file.");
+                Console.WriteLine($"Error details: {ex.Message}");
+            }
+            //To catch any other exceptions that might occur.
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An unexpected error occurred. Details of error: {ex.Message}");
+            }
+
         }
 
         //Method to return the student data:

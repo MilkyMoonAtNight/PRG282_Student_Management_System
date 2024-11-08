@@ -8,3 +8,5 @@
 500007, Henry Wilson, 29, Diploma in IT
 500008, Isabella Lewis, 35, Bachelor of IT
 500009, Jack Thompson,28,Bachelors of Computing
+500010,Lesedi Ngoveni,18,Bachelors of Computing
+500011,Deidre Mahlangu,19,Bachelors in IT

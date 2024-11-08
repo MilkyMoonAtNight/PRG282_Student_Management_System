@@ -43,19 +43,34 @@ namespace PRG282_Student_Management_System.PresentationLayer
             //Math.Round method used to round the AverageAge value to three decimal places.
             double AverageAge = totalStudents >0? Math.Round((double)totalAge/totalStudents,3) :0;
 
-
-            string summaryPath = "summary.txt";
-
-            using (StreamWriter writer = new StreamWriter(summaryPath))
+            //Try, catch for File operations error handling
+            try
             {
-                writer.WriteLine("Summary of Student data:");
-                writer.WriteLine("==================================");
-                writer.WriteLine($"Total students: {totalStudents}");
-                writer.WriteLine($"Average age of students: {AverageAge}");
-                writer.WriteLine("==================================");
+
+                string summaryPath = "summary.txt";
+
+                using (StreamWriter writer = new StreamWriter(summaryPath))
+                {
+                    writer.WriteLine("Summary of Student data:");
+                    writer.WriteLine("==================================");
+                    writer.WriteLine($"Total students: {totalStudents}");
+                    writer.WriteLine($"Average age of students: {AverageAge}");
+                    writer.WriteLine("==================================");
+                }
             }
 
+            //Permission error
+            catch (UnauthorizedAccessException ex)
+            {
+                Console.WriteLine($"User does not have permission to write to this file.");
+                Console.WriteLine($"Error details: {ex.Message}");
+            }
 
+            //Message to display if an error occurs whilst creating or writing to the file.
+            catch (Exception ex)
+            {
+                Console.WriteLine($"File could not be created/written to. Details of error: {ex.Message}");
+            }
 
             return (totalStudents, AverageAge);
 
