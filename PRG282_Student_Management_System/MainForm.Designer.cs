@@ -164,7 +164,7 @@
             this.cmbCourse.Items.AddRange(new object[] {
             "Bachelors of Computing",
             "Bachelors in IT",
-            "Dimploma in IT",
+            "Diploma in IT",
             "Certificate in IT"});
             this.cmbCourse.Location = new System.Drawing.Point(150, 243);
             this.cmbCourse.Name = "cmbCourse";
